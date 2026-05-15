@@ -1495,22 +1495,22 @@ From quick repairs to full installations, done right first time.</p>
           <p style="font-size:0.9rem;color:#aaa;line-height:1.6;">🛡️ <strong style="color:var(--white)">Gas Safe Registered</strong><br>All engineers carry their Gas Safe ID card. Ask to see it before any gas work begins.</p>
         </div>
       </div>
-      <div class="contact-form reveal">
+     <form class="contact-form reveal" action="mailto:coreplumbingandheatings@gmail.com" method="post" enctype="text/plain">
         <h3 class="form-title">Request a Quote</h3>
         <p class="form-sub">We’ll get back to you the same day, usually within the hour.</p>
         <div class="form-row">
           <div class="field">
             <label>Your Name</label>
-            <input type="text" placeholder="John Smith">
+            <input type="text" name="Name" placeholder="John Smith" required>
           </div>
           <div class="field">
             <label>Phone Number</label>
-            <input type="tel" placeholder="XXXXXXXXXX">
+           <input type="tel" name="Phone" placeholder="XXXXXXXXXX" required>
           </div>
         </div>
         <div class="field">
           <label>Service Needed</label>
-          <select>
+          <select name="Service Needed" required>
             <option value="">Select a service...</option>
             <option>Boiler repair / breakdown</option>
             <option>New boiler installation</option>
@@ -1526,11 +1526,10 @@ From quick repairs to full installations, done right first time.</p>
         </div>
         <div class="field">
           <label>Tell Us About the Job</label>
-          <textarea placeholder="Tell us what needs doing, your postcode, and the best time to reach you..."></textarea>
+         <textarea name="Job Details" placeholder="Tell us what needs doing, your postcode, and the best time to reach you..." required></textarea>
         </div>
-        <button class="submit">Request My Quote →</button>
-      </div>
-    </div>
+       <button type="submit" class="submit-btn">Request My Quote →</button>
+      </form>
   </div>
 </section>
 

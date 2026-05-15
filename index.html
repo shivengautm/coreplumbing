@@ -374,7 +374,16 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
   .services-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .steps::before { display: none; }
-  .why-grid { grid-template-columns: repeat(2, 1fr); }
+.why-grid { grid-template-columns: 1fr; gap: 18px; }
+  .why-card {
+  padding: 28px 24px;
+  text-align: left;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
   .reviews-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .form-row { grid-template-columns: 1fr; }

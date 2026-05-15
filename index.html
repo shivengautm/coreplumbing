@@ -104,7 +104,7 @@ nav {
 .nav-phone:hover {
   background: var(--orange-dark);
   transform: translateY(-1px);
-} { background: var(--orange-dark); transform: translateY(-1px); }
+}
 
 /* HERO */
 .hero {
@@ -1698,6 +1698,138 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
     color: #fff !important;
     text-decoration: none !important;
   }
+}/* CLEAN FINAL NAV FIX */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(17,17,17,0.97);
+  border-bottom: 2px solid var(--orange);
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.nav-logo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.nav-logo-text strong {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 0.9;
+}
+
+.nav-logo-text small {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: #888;
+  white-space: nowrap;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.nav-phone {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--orange) !important;
+  color: #fff !important;
+  padding: 12px 22px !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  min-width: 104px !important;
+}
+
+.nav-phone span {
+  display: inline !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.nav-phone:hover {
+  background: var(--orange-dark) !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .nav-inner {
+    height: 74px !important;
+    padding: 0 14px !important;
+    gap: 10px !important;
+  }
+
+  .nav-logo {
+    gap: 9px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .nav-logo img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .nav-logo-text strong {
+    font-size: 1.25rem !important;
+    line-height: 0.9 !important;
+  }
+
+  .nav-logo-text small {
+    font-size: 0.72rem !important;
+    margin-top: 5px !important;
+    max-width: 135px !important;
+    white-space: normal !important;
+    line-height: 1.15 !important;
+  }
+
+  .nav-phone {
+    min-width: 96px !important;
+    height: 46px !important;
+    padding: 0 18px !important;
+    font-size: 0.86rem !important;
+  }
 }</style>
 </head>
 <body>
@@ -1706,12 +1838,15 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">
-  <img src="core-logo.jpg" alt="CORE Logo">
-  <span class="nav-logo-text">
-    <strong>CORE</strong>
-    <small>Plumbing · Heating · Gas</small>
-  </span>
-</a>
+      <img src="core-logo.jpg" alt="CORE Logo">
+      <span class="nav-logo-text">
+        <strong>CORE</strong>
+        <small>Plumbing · Heating · Gas</small>
+      </span>
+    </a>
+
+    <div class="nav-right">
+      <a href="tel:07506298849" class="nav-phone">
         <span>Call Now</span>
       </a>
     </div>

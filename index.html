@@ -572,9 +572,13 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
 }
 
 .footer-copy a {
-  color: #888;
+  color: var(--orange);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.footer-copy a:hover {
+  color: #fff;
 }
 
 .footer-copy a:hover {
@@ -632,7 +636,9 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
-  .nav-right .nav-phone span { display: none; }
+ .nav-right .nav-phone span {
+  display: inline;
+}
 }
 
 /* SCROLL ANIMATION */

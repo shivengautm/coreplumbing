@@ -521,7 +521,79 @@ overflow: hidden;}.why::before {
 .contact-val a { color: var(--white); text-decoration: none; }
 .contact-val a:hover { color: var(--orange); }
 
-.contact-form {
+.contact-form {.quote-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.quote-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(226,72,28,0.14);
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.quote-highlights {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 34px;
+}
+
+.quote-highlights div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ddd;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.quote-highlights span {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 999px;
+  background: rgba(226,72,28,0.16);
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.quote-actions {
+  display: grid;
+  gap: 14px;
+}
+
+.secondary-quote-btn {
+  width: 100%;
+  min-height: 56px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.secondary-quote-btn:hover {
+  border-color: rgba(226,72,28,0.5);
+  background: rgba(226,72,28,0.12);
+  transform: translateY(-2px);
+}
   background:
     radial-gradient(circle at top right, rgba(226,72,28,0.12), transparent 35%),
     linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
@@ -1520,39 +1592,37 @@ From quick repairs to full installations, done right first time.</p>
         </div>
       </div>
      <div class="contact-form reveal">
-        <h3 class="form-title">Request a Quote</h3>
-        <p class="form-sub">We’ll get back to you the same day, usually within the hour.</p>
-        <div class="form-row">
-          <div class="field">
-            <label>Your Name</label>
-            <input type="text" name="Name" placeholder="John Smith" required>
-          </div>
-          <div class="field">
-            <label>Phone Number</label>
-           <input type="tel" name="Phone" placeholder="XXXXXXXXXX" required>
-          </div>
-        </div>
-        <div class="field">
-          <label>Service Needed</label>
-          <select name="Service Needed" required>
-            <option value="">Select a service...</option>
-            <option>Boiler repair / breakdown</option>
-            <option>New boiler installation</option>
-            <option>Annual boiler service</option>
-            <option>Gas Safety Certificate (CP12)</option>
-            <option>Plumbing repair</option>
-            <option>Bathroom installation</option>
-            <option>Central heating</option>
-            <option>Gas appliance installation</option>
-            <option>Emergency callout</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Tell Us About the Job</label>
-         <textarea name="Job Details" placeholder="Tell us what needs doing, your postcode, and the best time to reach you..." required></textarea>
-        </div>
-       <a class="submit-btn" href="tel:07506298849">Request My Quote →</a>
+       <div class="quote-card-content">
+  <div class="quote-badge">Fast Quote</div>
+
+  <h3 class="form-title">Need a price?</h3>
+
+  <p class="form-sub">
+    Call us now for the quickest response, or send your job details by email and we’ll get back to you the same day.
+  </p>
+
+  <div class="quote-highlights">
+    <div>
+      <span>✓</span>
+      Same-day replies
+    </div>
+    <div>
+      <span>✓</span>
+      Clear fixed-price quotes
+    </div>
+    <div>
+      <span>✓</span>
+      Local West Yorkshire team
+    </div>
+  </div>
+
+  <div class="quote-actions">
+    <a class="submit-btn" href="tel:07506298849">Call Now →</a>
+    <a class="secondary-quote-btn" href="mailto:coreplumbingandheatings@gmail.com?subject=Quote%20Request%20-%20CORE%20Plumbing&body=Hi%20CORE%2C%0A%0AI%27d%20like%20a%20quote.%0A%0AName%3A%20%0APhone%3A%20%0AService%20needed%3A%20%0APostcode%3A%20%0AJob%20details%3A%20%0A%0AThanks">
+      Email Job Details
+    </a>
+  </div>
+</div>
       </div>
   </div>
 </section>

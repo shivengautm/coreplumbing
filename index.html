@@ -1007,7 +1007,57 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
     font-size: 0.85rem !important;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 600px) {.nav {
+  padding: 14px 18px;
+  gap: 12px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-text strong,
+.logo-text .logo-main {
+  font-size: 1.55rem;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.logo-text span,
+.logo-text .logo-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  line-height: 1.15;
+  color: #aaa;
+  white-space: normal;
+.nav-phone,
+.nav-phone.mobile-call,
+.nav-right .nav-phone {
+  min-width: 96px;
+  height: 66px;
+  padding: 0 22px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--orange);
+  color: #fff !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.05;
+  white-space: normal;
+}}
   section.contact,
   .contact {
     padding: 60px 18px !important;

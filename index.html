@@ -515,7 +515,15 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
 .footer-center { color: #555; font-size: 0.85rem; text-align: center; }
 .footer-center span { color: var(--orange); font-weight: 600; }
 .footer-right { color: #444; font-size: 0.8rem; }
+.footer-copy a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
+.footer-copy a:hover {
+  color: var(--orange);
+}
 /* MOBILE */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
@@ -577,7 +585,7 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
     </a>
     <div class="nav-right">
       <a href="tel:07506298849" class="nav-phone">
-        📞 <span>Call Now</span>
+        <span>Call Now</span>
       </a>
     </div>
   </div>
@@ -1026,9 +1034,12 @@ From quick repairs to full installations, done right first time.</p>
       <span class="footer-logo-text">CORE Plumbing Heating Gas Ltd.</span>
     </div>
     <div class="footer-center">
-      <span>Gas Safe Registered</span> · No. [07506298849] · Bradford, West Yorkshire
+      <span>Gas Safe Registered</span> ·  07506 298849 · Leeds, West Yorkshire
     </div>
-    <div class="footer-right">© 2026 CORE Plumbing Heating Gas Ltd.</div>
+   <div class="footer-copy">
+  © 2026 CORE Plumbing, Heating & Gas Ltd. · Website by 
+  <a href="https://shiven.co" target="_blank" rel="noopener">ShivenWeb</a>
+</div>
   </div>
 </footer>
 

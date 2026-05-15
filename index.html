@@ -521,7 +521,52 @@ overflow: hidden;}.why::before {
 .contact-val a { color: var(--white); text-decoration: none; }
 .contact-val a:hover { color: var(--orange); }
 
-.contact-form {.quote-card-content {
+.contact-form {.quote-actions {
+  display: grid;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.quote-call-btn,
+.quote-email-btn {
+  min-height: 62px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none !important;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.quote-call-btn {
+  background: var(--orange);
+  color: #fff !important;
+  box-shadow: 0 18px 40px rgba(226,72,28,0.25);
+}
+
+.quote-call-btn:hover {
+  background: #ff5a24;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 24px 55px rgba(226,72,28,0.35);
+}
+
+.quote-email-btn {
+  background: transparent;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.quote-email-btn:hover {
+  border-color: var(--orange);
+  color: #fff !important;
+  background: rgba(226,72,28,0.08);
+  transform: translateY(-2px);
+}.quote-card-content {
   position: relative;
   z-index: 1;
 }
@@ -1641,8 +1686,8 @@ From quick repairs to full installations, done right first time.</p>
   </div>
 
   <div class="quote-actions">
-    <a class="submit-btn" href="tel:07506298849">Call Now →</a>
-    <a class="secondary-quote-btn" href="mailto:coreplumbingandheatings@gmail.com?subject=Quote%20Request%20-%20CORE%20Plumbing&body=Hi%20CORE%2C%0A%0AI%27d%20like%20a%20quote.%0A%0AName%3A%20%0APhone%3A%20%0AService%20needed%3A%20%0APostcode%3A%20%0AJob%20details%3A%20%0A%0AThanks">
+<a href="tel:07506298849" class="quote-call-btn">Call Now →</a>
+    <a href="mailto:coreplumbingandheatings@gmail.com" class="quote-email-btn">Email Job Details</a>
       Email Job Details
     </a>
   </div>

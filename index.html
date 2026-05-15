@@ -232,7 +232,20 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
 .step-desc { color: #888; font-size: 0.95rem; line-height: 1.6; }
 
 /* WHY US */
-.why { background: var(--dark2); padding: 100px 24px; }
+.why { background: var(--dark2); padding: 100px 24px; position: relative;
+overflow: hidden;}.why::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1800&q=80') center/cover no-repeat;
+  opacity: 0.025;
+  pointer-events: none;
+}
+
+.why > * {
+  position: relative;
+  z-index: 1;
+}
 .why-inner { max-width: 1200px; margin: 0 auto; }
 .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
 .why-card {

@@ -23,31 +23,88 @@ body { font-family: 'Outfit', sans-serif; background: var(--dark); color: var(--
 
 /* NAV */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 999;
   background: rgba(17,17,17,0.97);
   border-bottom: 2px solid var(--orange);
   backdrop-filter: blur(10px);
-  transition: box-shadow 0.3s;
 }
-nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+
 .nav-inner {
-  max-width: 1200px; margin: 0 auto; padding: 0 24px;
-  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
   height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.nav-logo img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
-.nav-logo-text { font-size: 1.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.5px; }
-.nav-logo-text span { color: var(--orange); }
-.nav-right { display: flex; align-items: center; gap: 16px; }
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.nav-logo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav-logo-text strong {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  line-height: 0.9;
+}
+
+.nav-logo-text small {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: #888;
+  white-space: nowrap;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .nav-phone {
-  display: flex; align-items: center; gap: 8px;
-  background: var(--orange); color: var(--white);
-  padding: 10px 20px; border-radius: 50px;
-  font-weight: 700; font-size: 1rem; text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange);
+  color: var(--white);
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
   transition: background 0.2s, transform 0.2s;
 }
-.nav-phone:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+.nav-phone:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+} { background: var(--orange-dark); transform: translateY(-1px); }
 
 /* HERO */
 .hero {
@@ -1023,9 +1080,42 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
   font-weight: 800;
   white-space: nowrap;
 }.nav-logo {
-  flex: 1;
-}/* HARD MOBILE HEADER FIX */
-@media (max-width: 600px) {
+  flex: 1;@media (max-width: 600px) {
+  .nav-inner {
+    height: 74px !important;
+    padding: 0 14px !important;
+  }
+
+  .nav-logo {
+    gap: 9px !important;
+  }
+
+  .nav-logo img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .nav-logo-text strong {
+    font-size: 1.25rem !important;
+  }
+
+  .nav-logo-text small {
+    font-size: 0.72rem !important;
+    margin-top: 5px !important;
+    max-width: 135px !important;
+    white-space: normal !important;
+    line-height: 1.15 !important;
+  }
+
+  .nav-phone {
+    padding: 12px 18px !important;
+    min-width: auto !important;
+    height: auto !important;
+    font-size: 0.86rem !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+  }
+}
   header,
   .header,
   .navbar,
@@ -1417,14 +1507,18 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">
-      <img src="core-logo.jpg" alt="CORE Logo">
-     <span class="nav-logo-text">
-  <strong>CORE</strong>
-  <small>Plumbing · Heating · Gas</small>
-</span>
-    </a>
-    <div class="nav-right">
-      <a href="tel:07506298849" class="nav-phone">
+  <img src="core-logo.jpg" alt="CORE Logo">
+  <span class="nav-logo-text">
+    <strong>CORE</strong>
+    <small>Plumbing · Heating · Gas</small>
+  </span>
+</a>
+
+<div class="nav-right">
+  <a href="tel:07506298849" class="nav-phone">
+    <span>Call Now</span>
+  </a>
+</div>
         <span>Call Now</span>
       </a>
     </div>

@@ -505,26 +505,107 @@ overflow: hidden;}.why::before {
 
 /* FOOTER */
 footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px; }
-.footer-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+.footer {
+  background: #080808;
+  border-top: 1px solid #222;
+  padding: 34px 24px;
 }
-.footer-logo { display: flex; align-items: center; gap: 10px; }
-.footer-logo img { width: 36px; height: 36px; border-radius: 50%; }
-.footer-logo-text { font-weight: 800; font-size: 1.1rem; }
-.footer-center { color: #555; font-size: 0.85rem; text-align: center; }
-.footer-center span { color: var(--orange); font-weight: 600; }
-.footer-right { color: #444; font-size: 0.8rem; }
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand img {
+  width: 42px;
+  height: 42px;
+}
+
+.footer-brand span,
+.footer-brand h3,
+.footer-brand .brand-name {
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.footer-info,
+.footer-copy {
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-info span:not(:last-child)::after {
+  content: "·";
+  margin-left: 10px;
+  color: #444;
+}
+
+.footer-copy {
+  text-align: right;
+}
+
+.footer-copy span:first-child::after {
+  content: "·";
+  margin: 0 8px;
+  color: #444;
+}
+
 .footer-copy a {
   color: #888;
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-weight: 500;
 }
 
 .footer-copy a:hover {
   color: var(--orange);
 }
 /* MOBILE */
+  .footer-inner {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.footer-brand {
+  justify-content: center;
+}
+
+.footer-info {
+  justify-content: center;
+}
+
+.footer-copy {
+  text-align: center;
+}
+
+.footer-copy span {
+  display: block;
+}
+
+.footer-copy span:first-child::after {
+  content: "";
+  margin: 0;
+}
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero-visual { display: none; }
@@ -1029,16 +1110,15 @@ From quick repairs to full installations, done right first time.</p>
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">
-      <img src="core-logo.jpg" alt="CORE">
-      <span class="footer-logo-text">CORE Plumbing Heating Gas Ltd.</span>
-    </div>
-    <div class="footer-center">
-      <span>Gas Safe Registered</span> ·  07506 298849 · Leeds, West Yorkshire
-    </div>
-   <div class="footer-copy">
-  © 2026 CORE Plumbing, Heating & Gas Ltd. · Website by 
-  <a href="https://shiven.co" target="_blank" rel="noopener">ShivenWeb</a>
+   <div class="footer-info">
+  <span>Gas Safe Registered</span>
+  <span>07506 298849</span>
+  <span>Leeds, West Yorkshire</span>
+</div>
+
+<div class="footer-copy">
+  <span>© 2026 CORE Plumbing, Heating & Gas Ltd.</span>
+  <span>Website by <a href="https://shiven.co" target="_blank" rel="noopener">ShivenWeb</a></span>
 </div>
   </div>
 </footer>

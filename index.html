@@ -575,6 +575,33 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
   color: var(--orange);
   text-decoration: none;
   font-weight: 600;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.footer-copy a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.footer-copy a:hover {
+  color: #fff;
+}
+
+.footer-copy a:hover::after {
+  transform: scaleX(1);
+}
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .footer-copy a:hover {

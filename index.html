@@ -677,7 +677,110 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
     flex-direction: column;
     align-items: flex-start;
     line-height: 1.1;
-  }
+  .contact {
+  padding: 70px 18px;
+}
+
+.contact-grid {
+  grid-template-columns: 1fr;
+  gap: 34px;
+}
+
+.contact-info {
+  gap: 22px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  font-size: 1.25rem;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.contact-note {
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 6px;
+}
+
+.contact-note strong {
+  font-size: 1rem;
+}
+
+.contact-note p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.quote-form {
+  padding: 28px 20px;
+  border-radius: 24px;
+}
+
+.quote-form h3 {
+  font-size: 1.55rem;
+}
+
+.quote-form > p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 26px;
+}
+
+.form-row {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  min-height: 56px;
+  padding: 15px 16px;
+  font-size: 0.95rem;
+  border-radius: 14px;
+}
+
+.form-group textarea {
+  min-height: 140px;
+}
+
+.submit-btn {
+  height: 58px;
+  font-size: 1rem;
+  border-radius: 999px;
+}.contact-item:nth-child(2) .contact-value {
+  font-size: 0.9rem;
+  letter-spacing: -0.02em;
+}}
 
   .nav-logo-text span {
     margin-left: 0 !important;
@@ -1065,7 +1168,7 @@ From quick repairs to full installations, done right first time.</p>
     <div class="reveal">
       <div class="section-label">Get In Touch</div>
       <h2 class="section-title">Get a Free Quote</h2>
-      <p class="section-sub">Tell us about your job and we'll get back to you the same day with a clear, honest price.</p>
+      <p class="section-sub">Tell us what you need and we’ll send a clear, honest quote the same day.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">

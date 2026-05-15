@@ -1007,7 +1007,28 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
     font-size: 0.85rem !important;
   }
 }
-@media (max-width: 600px) {.nav {
+@media (max-width: 600px) {.nav {.nav-phone,
+.nav-phone.mobile-call,
+.nav-right .nav-phone {
+  min-width: 118px;
+  height: 58px;
+  padding: 0 24px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange);
+  color: #fff !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  white-space: nowrap;
+}.nav-logo {
+  flex: 1;
+}
+
+.nav-right {
+  flex-shrink: 0;
+}
   padding: 14px 18px;
   gap: 12px;
 }

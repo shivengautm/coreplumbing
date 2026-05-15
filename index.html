@@ -1024,6 +1024,101 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
   white-space: nowrap;
 }.nav-logo {
   flex: 1;
+}/* HARD MOBILE HEADER FIX */
+@media (max-width: 600px) {
+  header,
+  .header,
+  .navbar,
+  .nav {
+    height: auto !important;
+  }
+
+  .nav-inner,
+  .navbar-inner,
+  .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    padding: 14px 18px !important;
+  }
+
+  .nav-logo,
+  .logo,
+  .brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+
+  .nav-logo img,
+  .logo img,
+  .brand img {
+    width: 52px !important;
+    height: 52px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .logo-text,
+  .brand-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .logo-text strong,
+  .brand-text strong,
+  .logo-main {
+    display: block !important;
+    font-size: 1.55rem !important;
+    line-height: 0.9 !important;
+    white-space: nowrap !important;
+  }
+
+  .logo-text span,
+  .brand-text span,
+  .logo-sub {
+    display: block !important;
+    margin-top: 7px !important;
+    font-size: 0.82rem !important;
+    line-height: 1.15 !important;
+    color: #aaa !important;
+    white-space: normal !important;
+    max-width: 150px !important;
+  }
+
+  .nav-right,
+  .header-right {
+    flex-shrink: 0 !important;
+  }
+
+  .nav-phone,
+  .mobile-call,
+  .call-btn,
+  .phone-btn,
+  .nav-right a {
+    width: auto !important;
+    min-width: 112px !important;
+    height: 58px !important;
+    padding: 0 22px !important;
+    border-radius: 999px !important;
+    background: var(--orange) !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+  }
 }
 
 .nav-right {

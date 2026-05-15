@@ -170,6 +170,16 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
   position: relative; overflow: hidden;
 }
 .service-card::before
+  {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.14;
+  pointer-events: none;
+}
   .plumbing-card::before {
   background-image: url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200&q=80');
 }
@@ -184,15 +194,6 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
 
 .gas-card::before {
   background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80');
-}{
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.14;
-  pointer-events: none;
 }
 .service-card:hover { border-color: #3a3a3a; transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 .service-card:hover::before { opacity: 0.08; }

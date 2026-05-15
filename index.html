@@ -169,11 +169,28 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
   border-radius: 20px; padding: 36px; transition: all 0.3s;
   position: relative; overflow: hidden;
 }
-.service-card::before {
+.service-card::before
+  .plumbing-card::before {
+  background-image: url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200&q=80');
+}
+
+.heating-card::before {
+  background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=80');
+}
+
+.bathroom-card::before {
+  background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200&q=80');
+}
+
+.gas-card::before {
+  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80');
+}{
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&q=80') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.05;
   pointer-events: none;
 }
@@ -468,7 +485,7 @@ From quick repairs to full installations, done right first time.</p>
 From quick repairs to full installations, done right first time.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card reveal">
+<div class="service-card plumbing-card reveal">
         <div class="service-icon">🔧</div>
         <h3 class="service-name">Plumbing</h3>
         <p class="service-desc">Fast, reliable plumbing for everyday repairs and full bathroom projects. From leaks and blockages to tap replacements and complete installations, we get the job done cleanly and properly.</p>
@@ -481,7 +498,7 @@ From quick repairs to full installations, done right first time.</p>
           <li>Outdoor tap installation</li>
         </ul>
       </div>
-      <div class="service-card reveal">
+<div class="service-card heating-card reveal">
         <div class="service-icon">🔥</div>
         <h3 class="service-name">Heating</h3>
         <p class="service-desc">Keep your home warm, efficient and running properly. We install, service and repair boilers, radiators and full central heating systems across Leeds and West Yorkshire.</p>
@@ -494,7 +511,7 @@ From quick repairs to full installations, done right first time.</p>
           <li>Underfloor heating</li>
         </ul>
         </div>
-      <div class="service-card reveal">
+<div class="service-card bathroom-card reveal">
         <div class="service-icon">🚽</div>
         <h3 class="service-name">Bathrooms</h3>
         <p class="service-desc">Complete bathroom design and installation, handled from start to finish. From new suites and showers to tiling, plumbing and finishing touches, we create bathrooms that look great and work properly.
@@ -507,7 +524,7 @@ From quick repairs to full installations, done right first time.</p>
           <li>Plumbing & finishing work</li>
         </ul>
       </div>
-      <div class="service-card reveal">
+<div class="service-card gas-card reveal">
         <div class="service-icon">⚡</div>
         <h3 class="service-name">Gas</h3>
         <p class="service-desc">Safe, professional gas work carried out by Gas Safe registered engineers. From landlord certificates to appliance installations and leak repairs, everything is handled properly.</p>

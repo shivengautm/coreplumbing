@@ -170,12 +170,15 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
   position: relative; overflow: hidden;
 }
 .service-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--orange); transform: scaleX(0); transition: transform 0.3s;
-  transform-origin: left;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&q=80') center/cover no-repeat;
+  opacity: 0.05;
+  pointer-events: none;
 }
 .service-card:hover { border-color: #3a3a3a; transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover::before { opacity: 0.08; }
 .service-icon {
   width: 64px; height: 64px; background: rgba(212,75,30,0.15);
   border-radius: 16px; display: flex; align-items: center; justify-content: center;

@@ -904,8 +904,101 @@ footer { background: #0a0a0a; border-top: 1px solid #1e1e1e; padding: 40px 24px;
     border-radius: 999px !important;
   }
 }@media (max-width: 900px) {
-  .contact * {
-    outline: 1px solid red !important;
+  .contact {
+    padding: 56px 18px !important;
+  }
+
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+
+  .contact-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  .contact-icon {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    border-radius: 15px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .contact-label {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.13em !important;
+    margin-bottom: 2px !important;
+  }
+
+  .contact-value {
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .contact-item:nth-child(2) .contact-value {
+    font-size: 0.78rem !important;
+    word-break: break-all !important;
+  }
+
+  .contact-note {
+    padding: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  .contact-note p {
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .quote-form {
+    padding: 24px 18px !important;
+    border-radius: 22px !important;
+  }
+
+  .quote-form h3 {
+    font-size: 1.45rem !important;
+  }
+
+  .quote-form > p {
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 22px !important;
+  }
+
+  .form-row {
+    display: block !important;
+  }
+
+  .form-group {
+    margin-bottom: 16px !important;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    min-height: 52px !important;
+    padding: 13px 15px !important;
+    font-size: 0.9rem !important;
+    border-radius: 14px !important;
+  }
+
+  .form-group textarea {
+    min-height: 125px !important;
+  }
+
+  .submit-btn {
+    height: 56px !important;
+    font-size: 0.95rem !important;
   }
 }</style>
 </head>
